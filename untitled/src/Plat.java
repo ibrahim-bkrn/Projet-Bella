@@ -10,7 +10,6 @@ public class Plat {
         this.prix = prix;
         this.type = type;
     }
-
     public String getNom() {return nom;}
     public double getPrix() {return prix;}
     public String getType() {return type;}
