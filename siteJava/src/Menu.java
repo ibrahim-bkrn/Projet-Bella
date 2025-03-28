@@ -6,10 +6,12 @@ public class Menu {
 
     public Menu() {this.plats = new ArrayList<>();}
 
+    // Cette fonction ajoute un plat au menu du restaurant avec ce qu'a initialiser le serveur.
     public void addPlat(Plat plat) {
         this.plats.add(plat);
     }
 
+    // Cette fonction affiche le menu entier du restaurant.
     public void printMenu() {
         System.out.println("========Menu de BELLA TRIVOLA========");
         for (int i = 0; i < plats.size(); i++) {
@@ -18,8 +20,8 @@ public class Menu {
         System.out.println("=====================================");
     }
 
+    //Cette fonction retourne le plat recherché par son nom.
     public void returnPlat(String nomPlat){
-
         for (int i = 0; i < plats.size(); i++){
             if (nomPlat.equals(plats.get(i).getNom())){
                 System.out.println("==================================");

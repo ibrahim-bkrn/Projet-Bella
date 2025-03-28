@@ -6,6 +6,7 @@ public class Main {
         Boolean console = true;
         Menu menu = new Menu();
         System.out.println("Exit : Pour sortir de la console \nAdd : Ajouter un plat \nPrint : Voir le menu \nSearch : rechercher un plat \nCom : Prendre une commande ");
+        // Pour manipuler les plats et les menus
         while (console) {
             System.out.println("--------------------------");
             System.out.print("Que souhaitez vous faire : ");
@@ -42,8 +43,9 @@ public class Main {
                     commande.ajouterPlat(platComTest2);
                     Plat platComTest3 = new Plat("salade", 4, "entrée");
                     commande.ajouterPlat(platComTest3);
-                    System.out.println("    ExitCom : Sortir de la commande \n    Ajt : Ajouter un plat dans la commande \n    Prix : Voir le prix total de la commande \n    Voir : Voir la commande entière");
+                    System.out.println("    ExitCom : Sortir de la commande \n    Ajt : Ajouter un plat dans la commande \n    Prix : Voir le prix total de la commande \n    Voir : Voir la commande entière\n    Id : Pour voir l'id de la commande");
                     Boolean consoleCom = true;
+                    // Pour faire manipuler les commandes :
                     while (consoleCom) {
                         System.out.println("--------------------------");
                         System.out.print("Que souhaitez vous faire dans la commande : ");
@@ -69,6 +71,9 @@ public class Main {
                                 break;
                             case "Voir":
                                 commande.afficherCommande();
+                                break;
+                            case "Id":
+                                System.out.println(commande.getId());
                                 break;
                             default:
                                 System.out.println("Invalid input pour la commande");
